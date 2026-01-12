@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="200" viewBox="0 0 140 200">
+  <rect width="140" height="200" fill="#4a3c54"/>
+  <rect x="10" y="20" width="120" height="3" fill="#d4c5a9"/>
+  <text x="70" y="110" text-anchor="middle" font-family="Arial" font-size="14" fill="#f8f6f0" font-weight="bold">
+    The Great
+  </text>
+  <text x="70" y="130" text-anchor="middle" font-family="Arial" font-size="14" fill="#f8f6f0" font-weight="bold">
+    Gatsby
+  </text>
+  <text x="70" y="160" text-anchor="middle" font-family="Arial" font-size="10" fill="#d4c5a9">
+    F. Scott Fitzgerald
+  </text>
+</svg>

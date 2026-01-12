@@ -1,0 +1,114 @@
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.confirm-dialog {
+  background: linear-gradient(135deg, #fefefe 0%, #f8f6f0 100%);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+  border: 1px solid rgba(212, 197, 169, 0.3);
+}
+
+.confirm-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 24px;
+}
+
+.confirm-icon.danger {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+
+.confirm-icon.warning {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.confirm-icon.info {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+.confirm-content {
+  margin-bottom: 30px;
+}
+
+.confirm-title {
+  font-family: 'Gentium Book Plus', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #4a3c54;
+  margin: 0 0 10px 0;
+}
+
+.confirm-message {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+  color: #6b5b73;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.confirm-actions button {
+  min-width: 100px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .confirm-dialog {
+    padding: 25px 20px;
+  }
+  
+  .confirm-actions {
+    flex-direction: column;
+  }
+  
+  .confirm-actions button {
+    width: 100%;
+    min-width: auto;
+  }
+}

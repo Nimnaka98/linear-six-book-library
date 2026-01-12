@@ -1,0 +1,130 @@
+.search-container {
+  position: relative;
+}
+
+.search-icon {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: #6b5b73;
+  background: rgba(248, 246, 240, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon:hover {
+  background: rgba(248, 246, 240, 0.6);
+  color: #4a3c54;
+  transform: scale(1.05);
+}
+
+.search-overlay {
+  position: fixed;
+  top: 100px; /* Below header */
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 30px 0;
+  z-index: 1000;
+  animation: slideDown 0.4s ease;
+  border-top: 2px solid #d4c5a9;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #d4c5a9;
+  box-shadow: 0 0 0 3px rgba(212, 197, 169, 0.3);
+}
+
+.search-input::placeholder {
+  color: #666;
+  font-weight: 300;
+}
+
+.search-btn {
+  background: #d4c5a9;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: #333;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #c4b59a;
+  transform: translateY(-2px);
+}
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: rotate(90deg);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .search-overlay {
+    top: 80px;
+    padding: 20px 0;
+  }
+  
+  .search-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+}

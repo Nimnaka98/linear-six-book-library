@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#e0e0e0"/>
+  <text x="200" y="150" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">
+    home-2-slide-2-image.jpg
+  </text>
+  <text x="200" y="170" text-anchor="middle" font-family="Arial" font-size="12" fill="#999">
+    (Replace with your image)
+  </text>
+</svg>

@@ -1,0 +1,41 @@
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star.filled {
+  color: #ffd700;
+}
+
+.star.half {
+  color: #ffd700;
+}
+
+.star.empty {
+  color: #e0e0e0;
+}
+
+.star-small {
+  font-size: 12px;
+}
+
+.star-medium {
+  font-size: 14px;
+}
+
+.star-large {
+  font-size: 16px;
+}
+
+.rating-text {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 13px;
+  color: #8a7a8a;
+  font-weight: 500;
+}

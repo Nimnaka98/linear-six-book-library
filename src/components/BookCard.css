@@ -1,0 +1,204 @@
+.book-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(107, 91, 115, 0.1);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 1px solid rgba(248, 246, 240, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(107, 91, 115, 0.2);
+}
+
+.book-image-container {
+  position: relative;
+  padding: 20px 20px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.book-thumbnail {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-thumbnail {
+  transform: scale(1.05);
+}
+
+.book-overlay {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.book-card:hover .book-overlay {
+  opacity: 1;
+}
+
+.action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.edit-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #6b5b73;
+}
+
+.edit-btn:hover {
+  background: #4a90e2;
+  color: white;
+  transform: scale(1.1);
+}
+
+.delete-btn {
+  background: rgba(212, 197, 169, 0.9);
+  color: #4a3c54;
+}
+
+.delete-btn:hover {
+  background: #e74c3c;
+  color: white;
+  transform: scale(1.1);
+}
+
+.book-category {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: linear-gradient(135deg, #d4c5a9 0%, #c4b59a 100%);
+  color: #4a3c54;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Titillium Web', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.book-info {
+  padding: 0 20px 20px;
+  text-align: center;
+}
+
+.book-title {
+  font-family: 'Gentium Book Plus', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #4a3c54;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-author {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px;
+  color: #6b5b73;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+}
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 14px;
+}
+
+.star.filled {
+  color: #ffd700;
+}
+
+.star.half {
+  color: #ffd700;
+}
+
+.star.empty {
+  color: #e0e0e0;
+}
+
+.rating-text {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 13px;
+  color: #8a7a8a;
+  font-weight: 500;
+}
+
+.book-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.current-price {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #4a3c54;
+}
+
+.original-price {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+  color: #8a7a8a;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .book-card {
+    border-radius: 15px;
+  }
+  
+  .book-thumbnail {
+    width: 120px;
+    height: 170px;
+  }
+  
+  .book-title {
+    font-size: 16px;
+  }
+  
+  .action-btn {
+    width: 35px;
+    height: 35px;
+  }
+}

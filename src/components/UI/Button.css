@@ -1,0 +1,93 @@
+.btn {
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Variants */
+.btn-primary {
+  background: #ff6b35;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #e55a2b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #4a3c54 0%, #6b5b73 100%);
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(107, 91, 115, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #4a3c54;
+  color: #4a3c54;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: #4a3c54;
+  color: white;
+}
+
+.btn-danger {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+}
+
+/* Sizes */
+.btn-small {
+  padding: 8px 20px;
+  font-size: 12px;
+}
+
+.btn-medium {
+  padding: 15px 35px;
+  font-size: 16px;
+}
+
+.btn-large {
+  padding: 18px 45px;
+  font-size: 18px;
+}
+
+/* Shine effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}

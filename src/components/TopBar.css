@@ -1,0 +1,49 @@
+.topbar {
+  background: linear-gradient(135deg, #2c2c2c 0%, #3a3a3a 100%);
+  color: #f8f6f0;
+  padding: 10px 0;
+  font-size: 13px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  display: block;
+  border-bottom: 1px solid rgba(248, 246, 240, 0.1);
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-left span {
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: #f8f6f0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+}
+
+.social-icon {
+  font-size: 15px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #f8f6f0;
+}
+
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-3px) scale(1.1);
+  color: #d4c5a9;
+  filter: drop-shadow(0 4px 8px rgba(212, 197, 169, 0.3));
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+}

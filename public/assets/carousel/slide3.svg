@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#333"/>
+  <circle cx="200" cy="150" r="80" fill="#d4c5a9" opacity="0.3"/>
+  <text x="200" y="140" text-anchor="middle" font-family="Arial" font-size="18" fill="#fff">⚡</text>
+  <text x="200" y="165" text-anchor="middle" font-family="Arial" font-size="14" fill="#ccc">Transform</text>
+</svg>

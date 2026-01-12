@@ -1,0 +1,19 @@
+.App {
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: 40px 0;
+}
+
+.main-content h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.main-content p {
+  color: #666;
+  text-align: center;
+  font-size: 18px;
+}

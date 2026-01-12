@@ -1,0 +1,61 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "thumbnail": "https://www.epubbooks.com/images/covers/th/the-great-gatsby-4efc66.jpg",
+      "rating": 4.5,
+      "category": "Fiction",
+      "price": 12.99,
+      "originalPrice": 16.99
+    },
+    {
+      "id": 2,
+      "title": "A Kite for Moon",
+      "author": "Jane Yolen",
+      "thumbnail": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1550610263i/40589879.jpg",
+      "rating": 4.8,
+      "category": "Fiction",
+      "price": 14.99
+    },
+    {
+      "id": 3,
+      "title": "City of Orange",
+      "author": "David Yoon",
+      "thumbnail": "https://m.media-amazon.com/images/I/91kAynG3vaL._AC_UF1000,1000_QL80_.jpg",
+      "rating": 4.6,
+      "category": "Non-Fiction",
+      "price": 18.99,
+      "originalPrice": 22.99
+    },
+    {
+      "id": 4,
+      "title": "Enceladus",
+      "author": "Barndon Q. Morris",
+      "thumbnail": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1697820359i/193543777.jpg",
+      "rating": 4.3,
+      "category": "Fiction",
+      "price": 13.99
+    },
+    {
+      "id": 5,
+      "title": "Gandhi",
+      "author": "Pankaj Mishra",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp69jDKDnRUCIkh4RBH4NWSR3IlbOm3-d0MQ&s",
+      "rating": 4.7,
+      "category": "Biography",
+      "price": 16.99,
+      "originalPrice": 19.99
+    },
+    {
+      "id": 6,
+      "title": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "thumbnail": "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1668782119i/40097951.jpg",
+      "rating": 4.2,
+      "category": "Science",
+      "price": 15.99
+    }
+  ]
+}

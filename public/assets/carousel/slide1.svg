@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#fff5cb"/>
+  <circle cx="200" cy="150" r="80" fill="#ff6b35" opacity="0.3"/>
+  <text x="200" y="140" text-anchor="middle" font-family="Arial" font-size="18" fill="#333">📚</text>
+  <text x="200" y="165" text-anchor="middle" font-family="Arial" font-size="14" fill="#666">Literature</text>
+</svg>
