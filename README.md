@@ -137,7 +137,7 @@ src/
 ## 🔧 Development
 
 ### Available Scripts
-- `npm start` - Start development server
+- `npm start` or `npm run dev` - Start development server
 - `npm build` - Build for production
 - `npm test` - Run tests
 
