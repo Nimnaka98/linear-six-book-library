@@ -5,23 +5,23 @@ A responsive React-based book library application with full CRUD functionality, 
 ## 🚀 Features
 
 ### Core Functionality
-- ✅ Display books with covers, titles, authors, and ratings
-- ✅ Search/filter books by title or author (real-time)
-- ✅ Add new books to the library
-- ✅ Edit existing book details
-- ✅ Delete books with confirmation dialog
-- ✅ Toggle between grid and list view
-- ✅ About page with project information
+- Display books with covers, titles, authors, and ratings
+- Search/filter books by title or author (real-time)
+- Add new books to the library
+- Edit existing book details
+- Delete books with confirmation dialog
+- Toggle between grid and list view
+- About page with project information
 
 ### Technical Features
-- ✅ JSON Server as mock backend API
-- ✅ React Router for navigation
-- ✅ Responsive design (mobile, tablet, desktop)
-- ✅ Component-based architecture
-- ✅ Context API for state management
-- ✅ Form validation for add/edit operations
-- ✅ Error handling with user feedback
-- ✅ Loading states for all operations
+- JSON Server as mock backend API
+- React Router for navigation
+- Responsive design (mobile, tablet, desktop)
+- Component-based architecture
+- Context API for state management
+- Form validation for add/edit operations
+- Error handling with user feedback
+- Loading states for all operations
 
 ## 🛠️ Setup Instructions
 
