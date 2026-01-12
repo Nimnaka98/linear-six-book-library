@@ -33,7 +33,7 @@ A responsive React-based book library application with full CRUD functionality, 
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Nimnaka98/linear-six-book-library.git
    cd LinearSix-Book
    ```
 
