@@ -24,7 +24,7 @@ const BookListItem = ({ book, onEdit, onDelete }) => {
             <h3 className="book-list-title">{book.title}</h3>
             <span className="book-list-category-inline">{book.category}</span>
           </div>
-          <p className="book-list-author">from {book.author}</p>
+          <p className="book-list-author">by {book.author}</p>
           <div className="book-list-rating">
             <Rating rating={book.rating} size="small" />
           </div>

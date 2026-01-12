@@ -16,7 +16,7 @@ const BookGrid = () => {
   const [editingBook, setEditingBook] = useState(null);
   const [deleteConfirm, setDeleteConfirm] = useState({ isOpen: false, book: null });
   
-  const { books, loading, error, success, addBook, updateBook, deleteBook, searchBooks, clearError, clearSuccess } = useBooks();
+  const { books, allBooks, searchTerm, loading, error, success, addBook, updateBook, deleteBook, searchBooks, clearError, clearSuccess } = useBooks();
 
   // Listen for view mode changes from Header component
   useEffect(() => {
@@ -77,13 +77,36 @@ const BookGrid = () => {
     setEditingBook(null);
   };
 
+  // Determine section title and subtitle based on search
+  const getSectionContent = () => {
+    if (searchTerm) {
+      if (books.length === 0) {
+        return {
+          title: 'No Results Found',
+          subtitle: `No books found matching "${searchTerm}". Try a different search term.`
+        };
+      } else {
+        return {
+          title: `Search Results (${books.length})`,
+          subtitle: `Found ${books.length} book${books.length === 1 ? '' : 's'} matching "${searchTerm}"`
+        };
+      }
+    }
+    return {
+      title: 'Featured Books',
+      subtitle: 'Discover our handpicked collection of bestsellers and literary gems'
+    };
+  };
+
+  const sectionContent = getSectionContent();
+
   return (
     <section className="book-grid-section">
       <div className="container">
         <div className="section-header">
           <div className="section-header-content">
-            <h2 className="section-title">Featured Books</h2>
-            <p className="section-subtitle">Discover our handpicked collection of bestsellers and literary gems</p>
+            <h2 className="section-title">{sectionContent.title}</h2>
+            <p className="section-subtitle">{sectionContent.subtitle}</p>
           </div>
           <Button 
             variant="primary" 
@@ -95,21 +118,30 @@ const BookGrid = () => {
           </Button>
         </div>
         
-        <div key={viewMode} className={`book-display ${viewMode === 'grid' ? 'grid-view' : 'list-view'}`}>
-          {books.map(book => (
-            viewMode === 'grid' ? (
-              <BookCard key={book.id} book={book} onEdit={handleEditBook} onDelete={handleDeleteBook} />
-            ) : (
-              <BookListItem key={book.id} book={book} onEdit={handleEditBook} onDelete={handleDeleteBook} />
-            )
-          ))}
-        </div>
+        {books.length > 0 ? (
+          <div key={viewMode} className={`book-display ${viewMode === 'grid' ? 'grid-view' : 'list-view'} ${searchTerm ? 'search-results' : ''}`}>
+            {books.map(book => (
+              viewMode === 'grid' ? (
+                <BookCard key={book.id} book={book} onEdit={handleEditBook} onDelete={handleDeleteBook} />
+              ) : (
+                <BookListItem key={book.id} book={book} onEdit={handleEditBook} onDelete={handleDeleteBook} />
+              )
+            ))}
+          </div>
+        ) : searchTerm ? (
+          <div className="no-results">
+            <div className="no-results-icon">📚</div>
+            <p className="no-results-text">Try searching for a different book title or author</p>
+          </div>
+        ) : null}
         
-        <div className="grid-footer">
-          <Button variant="secondary" size="large">
-            View All Books
-          </Button>
-        </div>
+        {!searchTerm && (
+          <div className="grid-footer">
+            <Button variant="secondary" size="large">
+              View All Books
+            </Button>
+          </div>
+        )}
       </div>
 
       <Modal

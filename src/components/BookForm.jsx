@@ -7,8 +7,8 @@ const BookForm = ({ book, onSubmit, onCancel, isLoading }) => {
     title: '',
     author: '',
     category: '',
-    price: '',
-    originalPrice: '',
+    // price: '',
+    // originalPrice: '',
     thumbnail: '',
     rating: 4.0
   });
@@ -25,8 +25,8 @@ const BookForm = ({ book, onSubmit, onCancel, isLoading }) => {
         title: book.title || '',
         author: book.author || '',
         category: book.category || '',
-        price: book.price || '',
-        originalPrice: book.originalPrice || '',
+        // price: book.price || '',
+        // originalPrice: book.originalPrice || '',
         thumbnail: book.thumbnail || '',
         rating: book.rating || 4.0
       });
@@ -40,10 +40,10 @@ const BookForm = ({ book, onSubmit, onCancel, isLoading }) => {
     if (!formData.title.trim()) newErrors.title = 'Title is required';
     if (!formData.author.trim()) newErrors.author = 'Author is required';
     if (!formData.category) newErrors.category = 'Category is required';
-    if (!formData.price || formData.price <= 0) newErrors.price = 'Valid price is required';
-    if (formData.originalPrice && formData.originalPrice <= formData.price) {
-      newErrors.originalPrice = 'Original price must be higher than current price';
-    }
+    // if (!formData.price || formData.price <= 0) newErrors.price = 'Valid price is required';
+    // if (formData.originalPrice && formData.originalPrice <= formData.price) {
+    //   newErrors.originalPrice = 'Original price must be higher than current price';
+    // }
     if (!formData.thumbnail.trim()) newErrors.thumbnail = 'Book cover URL is required';
 
     setErrors(newErrors);
@@ -55,8 +55,8 @@ const BookForm = ({ book, onSubmit, onCancel, isLoading }) => {
     if (validateForm()) {
       const bookData = {
         ...formData,
-        price: parseFloat(formData.price),
-        originalPrice: formData.originalPrice ? parseFloat(formData.originalPrice) : null,
+        // price: parseFloat(formData.price),
+        // originalPrice: formData.originalPrice ? parseFloat(formData.originalPrice) : null,
         rating: parseFloat(formData.rating)
       };
       
@@ -141,7 +141,7 @@ const BookForm = ({ book, onSubmit, onCancel, isLoading }) => {
         </div>
       </div>
 
-      <div className="form-row">
+      {/* <div className="form-row">
         <div className="form-group">
           <label htmlFor="price">Price ($) *</label>
           <input
@@ -173,7 +173,7 @@ const BookForm = ({ book, onSubmit, onCancel, isLoading }) => {
           />
           {errors.originalPrice && <span className="error-message">{errors.originalPrice}</span>}
         </div>
-      </div>
+      </div> */}
 
       <div className="form-group">
         <label htmlFor="thumbnail">Book Cover URL *</label>
