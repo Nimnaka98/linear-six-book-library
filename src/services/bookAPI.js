@@ -16,7 +16,7 @@ export const bookAPI = {
     }
   },
 
-  // Add new book
+  // Add a new book
   addBook: async (bookData) => {
     try {
       const response = await fetch(`${API_BASE_URL}/books`, {
@@ -38,7 +38,7 @@ export const bookAPI = {
     }
   },
 
-  // Update book
+  // Update books
   updateBook: async (id, bookData) => {
     try {
       const response = await fetch(`${API_BASE_URL}/books/${id}`, {
@@ -60,7 +60,7 @@ export const bookAPI = {
     }
   },
 
-  // Delete book
+  // Delete books
   deleteBook: async (id) => {
     try {
       const response = await fetch(`${API_BASE_URL}/books/${id}`, {
