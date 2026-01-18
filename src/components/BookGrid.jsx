@@ -15,6 +15,7 @@ const BookGrid = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingBook, setEditingBook] = useState(null);
   const [deleteConfirm, setDeleteConfirm] = useState({ isOpen: false, book: null });
+  const [checkUnsavedChanges, setCheckUnsavedChanges] = useState(() => () => false);
   
   const { books, allBooks, searchTerm, loading, error, success, addBook, updateBook, deleteBook, searchBooks, clearError, clearSuccess } = useBooks();
 
@@ -43,11 +44,13 @@ const BookGrid = () => {
 
   const handleAddBook = () => {
     setEditingBook(null);
+    setCheckUnsavedChanges(() => () => false);
     setIsModalOpen(true);
   };
 
   const handleEditBook = (book) => {
     setEditingBook(book);
+    setCheckUnsavedChanges(() => () => false);
     setIsModalOpen(true);
   };
 
@@ -149,12 +152,14 @@ const BookGrid = () => {
         onClose={handleModalClose}
         title={editingBook ? 'Edit Book' : 'Add New Book'}
         size="medium"
+        checkUnsavedChanges={checkUnsavedChanges}
       >
         <BookForm
           book={editingBook}
           onSubmit={handleFormSubmit}
           onCancel={handleModalClose}
           isLoading={loading}
+          onUnsavedChangesCheck={setCheckUnsavedChanges}
         />
       </Modal>
       <SuccessToast 
